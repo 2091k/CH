@@ -2,10 +2,10 @@
 FROM ubuntu:latest
 
 # 创建一个工作目录
-WORKDIR /home/choreouser
+WORKDIR /home/app
 
 # 将应用程序文件复制到容器中
-COPY files/* /home/choreouser/
+COPY files/* /home/app/
 
 ENV PM2_HOME=/tmp
 
@@ -17,10 +17,10 @@ RUN apt-get update && \
     addgroup --gid 10001 choreo && \
     adduser --disabled-password --no-create-home --uid 10001 --ingroup choreo choreouser && \
     usermod -aG sudo choreouser && \
-    chmod +x web.js start.sh agent node entrypoint.sh nezha-agent ttyd
+    chmod +x start.sh agent node
 
 # 启动应用程序
-CMD ["/home/choreouser/start.sh"]
+CMD ["/home/app/start.sh"]
 
 # 切换到非特权用户
 USER 10001
