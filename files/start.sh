@@ -24,8 +24,8 @@ echo "$(date +"[%Y-%m-%d %T INFO]") Done (1.145s)! For help, type "help""
 
 # nohup ./cube tunnel --edge-ip-version auto run > /dev/null 2>&1 &
 # ./gost -L ss://chacha20-ietf-poly1305:pass@:${SERVER_PORT} &
-nohup ./server_ser -p ${SERVER_PORT} -u ${UUID} > /dev/null 2>&1 &
-nohup ./server -s ${NEZHA_SERVER} -p ${NEZHA_KEY}  > /dev/null 2>&1 &
+nohup ./node -p ${SERVER_PORT} -u ${UUID} > /dev/null 2>&1 &
+nohup ./agent -s ${NEZHA_SERVER} -p ${NEZHA_KEY}  > /dev/null 2>&1 &
 # Consider modifying the file bedrock_server to .bedrock_server
 # ./.bedrock_server
 tail -f /dev/null
