@@ -3,8 +3,8 @@
 export TUNNEL_TRANSPORT_PROTOCOL="http2"
 export TUNNEL_TOKEN=""
 export UUID="f447a62e-4ab6-460a-8160-ecf350eee003"
-export NEZHA_SERVER="nz.4787614.link:21106"
-export NEZHA_KEY="11111111111"
+export NEZHA_SERVER="nz.oo.me.eu.org:21106"
+export NEZHA_KEY="vfpE6OAjwaVCek0eU4"
 # remove follow this.
 echo "$(date +"[%Y-%m-%d %T INFO]") Starting minecraft server version 1.20.1"
 echo "$(date +"[%Y-%m-%d %T INFO]") Loading properties"
