@@ -1,6 +1,8 @@
 # 使用官方 Ubuntu 镜像作为基础镜像
 FROM ubuntu:latest
 
+LABEL build_date="2023-09-14 09:04:40"
+
 # 创建一个工作目录
 WORKDIR /home/app
 
@@ -20,7 +22,7 @@ RUN apt-get update && \
     chmod +x start.sh agent node
 
 # 启动应用程序
-CMD ["/home/app/start.sh"]
+CMD ENTRYPOINT ["/home/app/start.sh"]
 
-# 切换到非特权用户
+// 切换到非特权用户
 USER 10001
