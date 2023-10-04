@@ -1,7 +1,7 @@
 # 使用官方 Ubuntu 镜像作为基础镜像
 FROM ubuntu:latest
 
-LABEL build_date="2023-10-04 11:00:07"
+LABEL build_date="2023-10-04 11:04:59"
 
 # 创建一个工作目录
 WORKDIR /home/app
